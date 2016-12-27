@@ -1,0 +1,8 @@
+{
+  "name":"Bookstore",
+  "version":"1.0.0",
+  "description":"Api Documentation for the Bookstore containing APIs for Genres and Books",
+  "template":{
+    "forceLanguage":"en"
+  }
+}

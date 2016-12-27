@@ -1,0 +1,26 @@
+<a ui-sref="/">Go back</a>
+<div class="panel panel-default" ng-init="getBook()">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{book.data.title}}</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{book.data.image_url}}">
+            </div>
+            <div class="col-md-8">
+                <p> {{book.data.description}} </p>
+                <ul class="list-group">
+                    <li class="list-group-item">Genre: {{book.data.genre}}</li>
+                    <li class="list-group-item">Author: {{book.data.author}}</li>
+                    <li class="list-group-item">Publisher: {{book.data.publisher}}</li>
+                    <li class="list-group-item">Pages: {{book.data.pages}}</li>
+                </ul>
+                <a target="_blank" href="{{book.data.buy_url}}" class="btn btn-primary">Buy on Amazon</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pull-right">
+    <a ui-sref="editBook({_id:book.data._id})">Edit</a> | <a ui-sref="deleteBook({_id:book.data._id})" ng-click="removeBook(book.data._id)">Delete</a>
+</div>
